@@ -7,7 +7,7 @@
         <server>
             <id>github</id>
             <username>$choozhenhui</username>
-            <password>$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</password>
+            <password>$github-pat</password>
         </server>
     </servers>
 
