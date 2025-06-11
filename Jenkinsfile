@@ -1,21 +1,34 @@
 pipeline {
     agent any
-
+    tools {
+        jdk 'Java17'
+        maven 'Maven3'
+    }
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                bat 'mvn clean install'
+                // Checkout the code from the repository
+                git 'https://github.com/choozhenhui/test'
             }
         }
-        stage('Test') {
+        stage('Build with maven') {
             steps {
-                bat 'mvn test'
+                // Run Maven install
+               
+                bat 'mvn -B clean install'
             }
         }
-        stage('Deploy') {
-            steps {
-                bat 'mvn deploy -DaltDeploymentRepository=internal.repo::default::https://github.com/choozhenhui/test/maven-snapshots/'
-            }
+    }
+    post {
+ 
+        success {
+            // Notify success
+            echo 'Build succeeded!'
         }
+        failure {
+            // Notify failure
+            echo 'Build failed!'
+        }
+       
     }
 }
