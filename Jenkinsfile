@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GITHUB_USERNAME = 'choozhenhui'
-        GITHUB_TOKEN = credentials('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') // Jenkins credentials ID
+        GITHUB_TOKEN = credentials('github-pat') // Jenkins credentials ID
     }
 
     stages {
