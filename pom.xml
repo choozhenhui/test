@@ -16,7 +16,7 @@
     <distributionManagement>
         <snapshotRepository>
            <id>github</id>
-           <url>https://maven.pkg.github.com/USERNAME/REPOSITORY</url>
+           <url>https://maven.pkg.github.com/choozhenhui/test</url>
         </snapshotRepository>
     </distributionManagement>
 
