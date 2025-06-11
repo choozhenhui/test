@@ -13,4 +13,11 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <snapshotRepository>
+           <id>github</id>
+           <url>https://maven.pkg.github.com/USERNAME/REPOSITORY</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
