@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                git 'https://github.com/choozhenhui/test'
+                git branch: 'main', url: 'https://github.com/choozhenhui/test'
             }
         }
         stage('Build with maven') {
