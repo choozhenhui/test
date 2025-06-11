@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'mvn deploy'
+                bat 'mvn deploy -DaltDeploymentRepository=internal.repo::default::https://github.com/choozhenhui/test/maven-snapshots/'
             }
         }
     }
